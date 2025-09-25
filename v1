@@ -1,0 +1,11 @@
+# Shadowrocket Module: Block QUIC for Google/YouTube
+# Отключает UDP/443 (QUIC) только для доменов Google/YouTube
+
+[Rule]
+DOMAIN-SUFFIX,googlevideo.com,REJECT-UDP
+DOMAIN-SUFFIX,youtube.com,REJECT-UDP
+DOMAIN-SUFFIX,ytimg.com,REJECT-UDP
+DOMAIN-SUFFIX,googleapis.com,REJECT-UDP
+DOMAIN-SUFFIX,gstatic.com,REJECT-UDP
+
+# Ничего больше не добавляем (без FINAL и прочего), чтобы не ломать базовый конфиг
